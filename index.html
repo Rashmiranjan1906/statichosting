@@ -9,16 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
-    <!-- Chosen Palette: Sattvic Harmony -->
-    <!-- Application Structure Plan: The SPA uses a thematic, single-page scrolling structure to guide the user through a narrative. It starts with a compelling Hero section stating the vision, followed by a 'Problem vs. Solution' section to establish context. It then explains the core 'Guiding Philosophy' (Nyaya-Vaisheshika) using interactive cards. The 'Ecosystem' section details the physical park and business model with key stats and a chart for clarity. The centerpiece is the 'Domes of Knowledge,' an interactive grid allowing users to explore each of the 9 themes in a dynamically updated content area without leaving the page. This is followed by a tabbed 'Impact' section detailing benefits for stakeholders, and a final 'Call to Action'. This non-linear, exploratory structure was chosen over a simple linear presentation to make the dense information more digestible, engaging, and user-driven, encouraging exploration rather than passive reading. -->
-    <!-- Visualization & Content Choices: 
-        - Report Info: Domotron specifications (area, lease). Goal: Inform/Compare. Viz: Horizontal Bar Chart (Chart.js). Interaction: None (static display). Justification: A chart provides a much quicker and more intuitive grasp of the scale and value proposition than a plain text table.
-        - Report Info: Nyaya-Vaisheshika pramanas. Goal: Inform/Organize. Viz: Interactive Cards (HTML/CSS/JS). Interaction: Click to reveal description. Justification: Makes the philosophical concepts less intimidating and more engaging to learn about.
-        - Report Info: 9 Thematic Domes. Goal: Organize/Inform. Viz: Interactive Grid (HTML/CSS/JS). Interaction: Click to display detailed content in a separate pane. Justification: This is the core of the report. A grid allows users to see all topics at once and explore them in any order, which is superior to a long, linear scroll.
-        - Report Info: Stakeholder Benefits. Goal: Compare/Organize. Viz: Tabbed Interface (HTML/CSS/JS). Interaction: Click tab to switch content. Justification: Organizes parallel information cleanly, preventing a long, repetitive list and allowing for easy comparison of benefits.
-        - Report Info: Key stats (30 domes, 10 years). Goal: Inform. Viz: "Key Figure" cards (HTML/CSS). Interaction: None. Justification: Highlights the most important numbers for quick absorption.
-    -->
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <style>
         body { font-family: 'Inter', sans-serif; }
         .chart-container { position: relative; width: 100%; max-width: 600px; margin-left: auto; margin-right: auto; height: 350px; max-height: 400px; }
@@ -119,9 +109,9 @@
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-lg">
                         <h3 class="text-xl font-bold text-slate-800 text-center mb-4">Domotron Lease Features</h3>
-                         <div class="chart-container">
-                            <canvas id="domotronChart"></canvas>
-                        </div>
+                           <div class="chart-container">
+                               <canvas id="domotronChart"></canvas>
+                           </div>
                     </div>
                 </div>
             </div>
@@ -136,39 +126,39 @@
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
                     <div class="lg:col-span-4">
                         <div class="grid grid-cols-3 gap-2 sticky top-28">
-                            <div id="nav-d1" class="dome-nav-item active flex flex-col items-center justify-center text-center p-2 rounded-lg cursor-pointer bg-white shadow-md hover:bg-orange-700 hover:text-white transition-colors h-24">
+                            <div id="d1" class="dome-nav-item active flex flex-col items-center justify-center text-center p-2 rounded-lg cursor-pointer bg-white shadow-md hover:bg-orange-700 hover:text-white transition-colors h-24">
                                 <span class="text-2xl">🏛</span>
                                 <span class="text-xs font-semibold mt-1">History</span>
                             </div>
-                            <div id="nav-d2" class="dome-nav-item flex flex-col items-center justify-center text-center p-2 rounded-lg cursor-pointer bg-white shadow-md hover:bg-orange-700 hover:text-white transition-colors h-24">
+                            <div id="d2" class="dome-nav-item flex flex-col items-center justify-center text-center p-2 rounded-lg cursor-pointer bg-white shadow-md hover:bg-orange-700 hover:text-white transition-colors h-24">
                                 <span class="text-2xl">🔭</span>
                                 <span class="text-xs font-semibold mt-1">Astronomy</span>
                             </div>
-                            <div id="nav-d3" class="dome-nav-item flex flex-col items-center justify-center text-center p-2 rounded-lg cursor-pointer bg-white shadow-md hover:bg-orange-700 hover:text-white transition-colors h-24">
+                            <div id="d3" class="dome-nav-item flex flex-col items-center justify-center text-center p-2 rounded-lg cursor-pointer bg-white shadow-md hover:bg-orange-700 hover:text-white transition-colors h-24">
                                 <span class="text-2xl">⚒</span>
                                 <span class="text-xs font-semibold mt-1">Metallurgy</span>
                             </div>
-                            <div id="nav-d4" class="dome-nav-item flex flex-col items-center justify-center text-center p-2 rounded-lg cursor-pointer bg-white shadow-md hover:bg-orange-700 hover:text-white transition-colors h-24">
+                            <div id="d4" class="dome-nav-item flex flex-col items-center justify-center text-center p-2 rounded-lg cursor-pointer bg-white shadow-md hover:bg-orange-700 hover:text-white transition-colors h-24">
                                 <span class="text-2xl">🧮</span>
                                 <span class="text-xs font-semibold mt-1">Mathematics</span>
                             </div>
-                            <div id="nav-d5" class="dome-nav-item flex flex-col items-center justify-center text-center p-2 rounded-lg cursor-pointer bg-white shadow-md hover:bg-orange-700 hover:text-white transition-colors h-24">
+                            <div id="d5" class="dome-nav-item flex flex-col items-center justify-center text-center p-2 rounded-lg cursor-pointer bg-white shadow-md hover:bg-orange-700 hover:text-white transition-colors h-24">
                                 <span class="text-2xl">🌿</span>
                                 <span class="text-xs font-semibold mt-1">Ayurveda</span>
                             </div>
-                            <div id="nav-d6" class="dome-nav-item flex flex-col items-center justify-center text-center p-2 rounded-lg cursor-pointer bg-white shadow-md hover:bg-orange-700 hover:text-white transition-colors h-24">
+                            <div id="d6" class="dome-nav-item flex flex-col items-center justify-center text-center p-2 rounded-lg cursor-pointer bg-white shadow-md hover:bg-orange-700 hover:text-white transition-colors h-24">
                                 <span class="text-2xl">🏹</span>
                                 <span class="text-xs font-semibold mt-1">War Strategy</span>
                             </div>
-                            <div id="nav-d7" class="dome-nav-item flex flex-col items-center justify-center text-center p-2 rounded-lg cursor-pointer bg-white shadow-md hover:bg-orange-700 hover:text-white transition-colors h-24">
+                            <div id="d7" class="dome-nav-item flex flex-col items-center justify-center text-center p-2 rounded-lg cursor-pointer bg-white shadow-md hover:bg-orange-700 hover:text-white transition-colors h-24">
                                 <span class="text-2xl">⚛</span>
                                 <span class="text-xs font-semibold mt-1">Atomic Science</span>
                             </div>
-                            <div id="nav-d8" class="dome-nav-item flex flex-col items-center justify-center text-center p-2 rounded-lg cursor-pointer bg-white shadow-md hover:bg-orange-700 hover:text-white transition-colors h-24">
+                            <div id="d8" class="dome-nav-item flex flex-col items-center justify-center text-center p-2 rounded-lg cursor-pointer bg-white shadow-md hover:bg-orange-700 hover:text-white transition-colors h-24">
                                 <span class="text-2xl">✨</span>
                                 <span class="text-xs font-semibold mt-1">Panchadhatu</span>
                             </div>
-                            <div id="nav-d9" class="dome-nav-item flex flex-col items-center justify-center text-center p-2 rounded-lg cursor-pointer bg-white shadow-md hover:bg-orange-700 hover:text-white transition-colors h-24">
+                            <div id="d9" class="dome-nav-item flex flex-col items-center justify-center text-center p-2 rounded-lg cursor-pointer bg-white shadow-md hover:bg-orange-700 hover:text-white transition-colors h-24">
                                 <span class="text-2xl">🎵</span>
                                 <span class="text-xs font-semibold mt-1">Music</span>
                             </div>
@@ -280,9 +270,9 @@
                         type: 'logarithmic',
                     },
                     y: {
-                         ticks: {
-                            font: { size: 12 }
-                        }
+                           ticks: {
+                               font: { size: 12 }
+                           }
                     }
                 }
             }
@@ -294,22 +284,22 @@
         }
 
         const domesData = {
-            d1: { title: 'Civilizational History (इतिहास)', content: <strong>Core Objective:</strong> To understand the evolution of human societies, especially the Indic civilization, as a dynamic interplay of culture, technology, and environment, fostering critical analysis of historical sources.<br><br><strong>Nyaya-Vaisheshika Application:</strong> Students act as 'digital archaeologists,' using VR to experience historical periods directly (Pratyakṣa) and analyzing virtual evidence to form hypotheses (Anumāna).<br><br><strong>Proposed Exhibits:</strong> VR Time-Walk through ancient cities like Mohenjo-Daro, AR Artifact Analysis of items like Ashokan edicts, a gamified "Civilization Builder" strategy table, and Holographic Historians for interactive dialogues.},
-            d2: { title: 'Panchanga (पञ्चाङ्ङ्ग - Astronomy)', content: <strong>Core Objective:</strong> To reveal the Panchanga not as mythology but as a precise science of timekeeping rooted in rigorous astronomical observation and mathematics.<br><br><strong>Nyaya-Vaisheshika Application:</strong> Students directly observe celestial mechanics in a dome projection (Pratyakṣa) and use learned principles to perform predictive calculations for events like eclipses (Anumāna).<br><br><strong>Proposed Exhibits:</strong> A Virtual Jantar Mantar Observatory, an Interactive Celestial Sphere to visualize the 27 nakshatras, a Panchanga Calculation Workbench for step-by-step learning, and a 'Cosmic Alignment' puzzle game.},
-            d3: { title: 'Dhatushastra (धातुशास्त्र - Metallurgy)', content: <strong>Core Objective:</strong> To explore ancient India's world-leading metallurgical knowledge, from wootz steel to the intricate casting of Chola bronzes and the unique production of pure zinc.<br><br><strong>Nyaya-Vaisheshika Application:</strong> Students engage with metallurgical processes in safe VR forges (Pratyakṣa) and analyze properties of famous artifacts to deduce the sophisticated techniques used (Anumāna).<br><br><strong>Proposed Exhibits:</strong> A Virtual Lost-Wax Foundry to create Chola bronzes, an Interactive Wootz Steel Forge with haptic feedback, a recreated Rasashala Alchemical Laboratory, and a Metallurgical Micro-Explorer to analyze artifacts.},
-            d4: { title: 'Ganit (गणित - Mathematics)', content: <strong>Core Objective:</strong> To celebrate the genius of ancient Indian mathematics, including the decimal system, zero (shunya), and the efficient algorithms of Vedic Mathematics.<br><br><strong>Nyaya-Vaisheshika Application:</strong> Learning is kinesthetic and visual with large-scale manipulatives (Pratyakṣa), allowing students to discover principles like the Pythagorean theorem for themselves through guided experiments (Anumāna).<br><br><strong>Proposed Exhibits:</strong> A Vedic Sutra Workbench for tackling complex arithmetic, a massive kinetic Galton Box demonstrating probability, a Geometric Architecture Simulator based on Shulba Sutras, and a 'Journey to Zero' interactive wall.},
-            d5: { title: 'Ayurveda (आयुर्वेद - The Science of Life)', content: <strong>Core Objective:</strong> To present Ayurveda as a comprehensive, holistic system of health, emphasizing the balance of mind, body, and spirit, and the use of medicinal plants (Vanayurveda) and flowers (Pushpayurveda).<br><br><strong>Nyaya-Vaisheshika Application:</strong> Students diagnose virtual patients (Pratyakṣa) and apply Ayurvedic principles to formulate treatment plans, reasoning through the selection of herbs and practices (Anumāna).<br><br><strong>Proposed Exhibits:</strong> An Interactive Dosha Diagnosis Station, a Virtual Herbarium Wall showcasing hundreds of medicinal plants, a gamified 'Ayurvedic Healer' simulation, and a recreated 'Rasashala' Ayurvedic Pharmacy.},
-            d6: { title: 'War Strategy & Dhanurveda (युद्ध नीति, धनुर्वेद)', content: <strong>Core Objective:</strong> To study ancient Indian martial traditions as a complete discipline, encompassing battlefield strategy (vyuha), philosophy of combat, and ethics (yuddha dharma).<br><br><strong>Nyaya-Vaisheshika Application:</strong> Students gain direct experience through VR battle simulations (Pratyakṣa) and analyze famous battles from the Mahabharata to deconstruct strategies and devise alternatives (Anumāna).<br><br><strong>Proposed Exhibits:</strong> A Battle of Kurukshetra holographic strategy table, a VR Dhanurveda archery range, an Ethical Dilemma Simulator narrative game, and 'The Warrior’s Kit' interactive display of ancient armaments.},
-            d7: { title: 'Atomic Science (अणु विज्ञान)', content: <strong>Core Objective:</strong> To delve into ancient Indian atomic theories, primarily from the Vaisheshika school of Sage Kanada, and place these philosophical models in dialogue with modern physics.<br><br><strong>Nyaya-Vaisheshika Application:</strong> Students manipulate virtual atoms (anus) to see how they combine into complex structures (Pratyakṣa) and run simulated experiments to deduce emergent properties (Anumāna).<br><br><strong>Proposed Exhibits:</strong> Kanada's Digital Sandbox for playing with virtual atoms, a gamified Particle Discovery Lab simulating a modern accelerator, an interactive timeline wall comparing atomic models through history, and a holographic dialogue between Sage Kanada and a modern physicist.},
-            d8: { title: 'Panchadhatu (पञ्चधातु - The Five Metals)', content: <strong>Core Objective:</strong> To explore the cultural, spiritual, and material significance of the sacred five-metal alloy (gold, silver, copper, zinc, iron) used in crafting sacred idols (murtis).<br><br><strong>Nyaya-Vaisheshika Application:</strong> Students virtually mix the five metals in an alchemical simulation to observe the resulting properties (Pratyakṣa) and analyze historical artifacts to infer the intent behind specific metal ratios (Anumāna).<br><br><strong>Proposed Exhibits:</strong> An Alchemical Mixer Station to create custom alloys, an 'Aura and Energy' installation that responds to visitors with light and sound, a 3D Digital Idol Sculpting station, and a 'From Ore to Offering' immersive animated journey.},
-            d9: { title: 'Sangeet (संगीत - Music)', content: <strong>Core Objective:</strong> To provide an experiential understanding of Indian classical music as a science of sound (nada), emotion (rasa), and time (tala), moving beyond passive listening.<br><br><strong>Nyaya-Vaisheshika Application:</strong> Learning is sensory, with students playing virtual instruments and interacting with large-scale sound sculptures (Pratyakṣa), while also deconstructing music to identify ragas and talas (Anumāna).<br><br><strong>Proposed Exhibits:</strong> An Interactive Sound Garden with large playable instruments, a Virtual Ensemble VR experience placing the user in the middle of a concert, a Raga Visualization Chamber with synesthetic light shows, and a 'Build-an-Instrument' interactive station.}
+            d1: { title: 'Civilizational History (इतिहास)', content: '<strong>Core Objective:</strong> To understand the evolution of human societies, especially the Indic civilization, as a dynamic interplay of culture, technology, and environment, fostering critical analysis of historical sources.<br><br><strong>Nyaya-Vaisheshika Application:</strong> Students act as \'digital archaeologists,\' using VR to experience historical periods directly (Pratyakṣa) and analyzing virtual evidence to form hypotheses (Anumāna).<br><br><strong>Proposed Exhibits:</strong> VR Time-Walk through ancient cities like Mohenjo-Daro, AR Artifact Analysis of items like Ashokan edicts, a gamified "Civilization Builder" strategy table, and Holographic Historians for interactive dialogues.'},
+            d2: { title: 'Panchanga (पञ्चाङ्ङ्ग - Astronomy)', content: '<strong>Core Objective:</strong> To reveal the Panchanga not as mythology but as a precise science of timekeeping rooted in rigorous astronomical observation and mathematics.<br><br><strong>Nyaya-Vaisheshika Application:</strong> Students directly observe celestial mechanics in a dome projection (Pratyakṣa) and use learned principles to perform predictive calculations for events like eclipses (Anumāna).<br><br><strong>Proposed Exhibits:</strong> A Virtual Jantar Mantar Observatory, an Interactive Celestial Sphere to visualize the 27 nakshatras, a Panchanga Calculation Workbench for step-by-step learning, and a \'Cosmic Alignment\' puzzle game.'},
+            d3: { title: 'Dhatushastra (धातुशास्त्र - Metallurgy)', content: '<strong>Core Objective:</strong> To explore ancient India\'s world-leading metallurgical knowledge, from wootz steel to the intricate casting of Chola bronzes and the unique production of pure zinc.<br><br><strong>Nyaya-Vaisheshika Application:</strong> Students engage with metallurgical processes in safe VR forges (Pratyakṣa) and analyze properties of famous artifacts to deduce the sophisticated techniques used (Anumāna).<br><br><strong>Proposed Exhibits:</strong> A Virtual Lost-Wax Foundry to create Chola bronzes, an Interactive Wootz Steel Forge with haptic feedback, a recreated Rasashala Alchemical Laboratory, and a Metallurgical Micro-Explorer to analyze artifacts.'},
+            d4: { title: 'Ganit (गणित - Mathematics)', content: '<strong>Core Objective:</strong> To celebrate the genius of ancient Indian mathematics, including the decimal system, zero (shunya), and the efficient algorithms of Vedic Mathematics.<br><br><strong>Nyaya-Vaisheshika Application:</strong> Learning is kinesthetic and visual with large-scale manipulatives (Pratyakṣa), allowing students to discover principles like the Pythagorean theorem for themselves through guided experiments (Anumāna).<br><br><strong>Proposed Exhibits:</strong> A Vedic Sutra Workbench for tackling complex arithmetic, a massive kinetic Galton Box demonstrating probability, a Geometric Architecture Simulator based on Shulba Sutras, and a \'Journey to Zero\' interactive wall.'},
+            d5: { title: 'Ayurveda (आयुर्वेद - The Science of Life)', content: '<strong>Core Objective:</strong> To present Ayurveda as a comprehensive, holistic system of health, emphasizing the balance of mind, body, and spirit, and the use of medicinal plants (Vanayurveda) and flowers (Pushpayurveda).<br><br><strong>Nyaya-Vaisheshika Application:</strong> Students diagnose virtual patients (Pratyakṣa) and apply Ayurvedic principles to formulate treatment plans, reasoning through the selection of herbs and practices (Anumāna).<br><br><strong>Proposed Exhibits:</strong> An Interactive Dosha Diagnosis Station, a Virtual Herbarium Wall showcasing hundreds of medicinal plants, a gamified \'Ayurvedic Healer\' simulation, and a recreated \'Rasashala\' Ayurvedic Pharmacy.'},
+            d6: { title: 'War Strategy & Dhanurveda (युद्ध नीति, धनुर्वेद)', content: '<strong>Core Objective:</strong> To study ancient Indian martial traditions as a complete discipline, encompassing battlefield strategy (vyuha), philosophy of combat, and ethics (yuddha dharma).<br><br><strong>Nyaya-Vaisheshika Application:</strong> Students gain direct experience through VR battle simulations (Pratyakṣa) and analyze famous battles from the Mahabharata to deconstruct strategies and devise alternatives (Anumāna).<br><br><strong>Proposed Exhibits:</strong> A Battle of Kurukshetra holographic strategy table, a VR Dhanurveda archery range, an Ethical Dilemma Simulator narrative game, and \'The Warrior’s Kit\' interactive display of ancient armaments.'},
+            d7: { title: 'Atomic Science (अणु विज्ञान)', content: '<strong>Core Objective:</strong> To delve into ancient Indian atomic theories, primarily from the Vaisheshika school of Sage Kanada, and place these philosophical models in dialogue with modern physics.<br><br><strong>Nyaya-Vaisheshika Application:</strong> Students manipulate virtual atoms (anus) to see how they combine into complex structures (Pratyakṣa) and run simulated experiments to deduce emergent properties (Anumāna).<br><br><strong>Proposed Exhibits:</strong> Kanada\'s Digital Sandbox for playing with virtual atoms, a gamified Particle Discovery Lab simulating a modern accelerator, an interactive timeline wall comparing atomic models through history, and a holographic dialogue between Sage Kanada and a modern physicist.'},
+            d8: { title: 'Panchadhatu (पञ्चधातु - The Five Metals)', content: '<strong>Core Objective:</strong> To explore the cultural, spiritual, and material significance of the sacred five-metal alloy (gold, silver, copper, zinc, iron) used in crafting sacred idols (murtis).<br><br><strong>Nyaya-Vaisheshika Application:</strong> Students virtually mix the five metals in an alchemical simulation to observe the resulting properties (Pratyakṣa) and analyze historical artifacts to infer the intent behind specific metal ratios (Anumāna).<br><br><strong>Proposed Exhibits:</strong> An Alchemical Mixer Station to create custom alloys, an \'Aura and Energy\' installation that responds to visitors with light and sound, a 3D Digital Idol Sculpting station, and a \'From Ore to Offering\' immersive animated journey.'},
+            d9: { title: 'Sangeet (संगीत - Music)', content: '<strong>Core Objective:</strong> To provide an experiential understanding of Indian classical music as a science of sound (nada), emotion (rasa), and time (tala), moving beyond passive listening.<br><br><strong>Nyaya-Vaisheshika Application:</strong> Learning is sensory, with students playing virtual instruments and interacting with large-scale sound sculptures (Pratyakṣa), while also deconstructing music to identify ragas and talas (Anumāna).<br><br><strong>Proposed Exhibits:</strong> An Interactive Sound Garden with large playable instruments, a Virtual Ensemble VR experience placing the user in the middle of a concert, a Raga Visualization Chamber with synesthetic light shows, and a \'Build-an-Instrument\' interactive station.'}
         };
 
         const impactData = {
-            students: <strong>A Gateway to Real-World Exposure.</strong> BhaViKshe offers a "Unique Opportunity Window (UOW)" for talent to be identified by industry and academia. The project-based approach equips students with tangible skills, giving them a "taste of the Real World." It also encourages family involvement in identifying and supporting a child's natural inclinations.,
-            institutions: <strong>A New Paradigm in Branding.</strong> For partner institutions, the "reach will be phenomenal." It provides a permanent, high-profile platform to showcase innovation and talented students, who become powerful "Brand Ambassadors." This visibility across industry and academia is a potent recruitment and marketing tool.,
-            industry: <strong>A Direct Conduit to Innovation.</strong> BhaViKshe functions as a curated pipeline for sourcing genuine, application-ready talent. With industrial think tanks on the board and regular research conventions, the ecosystem ensures relevance and provides venture capitalists with a dynamic scouting ground for new ideas and entrepreneurs.,
-            society: <strong>Fostering a Culture of Lifelong Learning.</strong> By creating an open, public space for unbiased inquiry, the project aims to make this the "New Normal." It democratizes access to knowledge and inspiration, cultivating collaborative, team-oriented citizens and contributing to a stronger, more innovative Bharat.
+            students: '<strong>A Gateway to Real-World Exposure.</strong> BhaViKshe offers a "Unique Opportunity Window (UOW)" for talent to be identified by industry and academia. The project-based approach equips students with tangible skills, giving them a "taste of the Real World." It also encourages family involvement in identifying and supporting a child\'s natural inclinations.',
+            institutions: '<strong>A New Paradigm in Branding.</strong> For partner institutions, the "reach will be phenomenal." It provides a permanent, high-profile platform to showcase innovation and talented students, who become powerful "Brand Ambassadors." This visibility across industry and academia is a potent recruitment and marketing tool.',
+            industry: '<strong>A Direct Conduit to Innovation.</strong> BhaViKshe functions as a curated pipeline for sourcing genuine, application-ready talent. With industrial think tanks on the board and regular research conventions, the ecosystem ensures relevance and provides venture capitalists with a dynamic scouting ground for new ideas and entrepreneurs.',
+            society: '<strong>Fostering a Culture of Lifelong Learning.</strong> By creating an open, public space for unbiased inquiry, the project aims to make this the "New Normal." It democratizes access to knowledge and inspiration, cultivating collaborative, team-oriented citizens and contributing to a stronger, more innovative Bharat.'
         };
 
         const domeNavItems = document.querySelectorAll('.dome-nav-item');
@@ -317,7 +307,8 @@
 
         function updateDomeContent(domeId) {
             domeNavItems.forEach(item => item.classList.remove('active'));
-            document.getElementById(nav-${domeId}).classList.add('active');
+            // Corrected this line:
+            document.getElementById(domeId).classList.add('active'); 
 
             const data = domesData[domeId];
             domeContentDisplay.innerHTML = `<div class="fade-in">
@@ -328,30 +319,31 @@
 
         domeNavItems.forEach(item => {
             item.addEventListener('click', () => {
-                const domeId = item.id.replace('nav-', '');
+                const domeId = item.id;
                 updateDomeContent(domeId);
             });
         });
 
+        // Initialize with the first dome's content
+        updateDomeContent('d1');
+
         const impactTabs = document.querySelectorAll('.impact-tab');
         const impactContentDisplay = document.getElementById('impact-content-display');
 
-        function updateImpactContent(targetId) {
+        function updateImpactContent(target) {
             impactTabs.forEach(tab => tab.classList.remove('active'));
-            document.querySelector(.impact-tab[data-target="${targetId}"]).classList.add('active');
-            
-            const data = impactData[targetId];
-            impactContentDisplay.innerHTML = <div class="fade-in"><p class="text-slate-700 leading-relaxed text-lg">${data}</p></div>;
+            document.querySelector(`.impact-tab[data-target="${target}"]`).classList.add('active');
+            impactContentDisplay.innerHTML = `<div class="fade-in text-slate-600">${impactData[target]}</div>`;
         }
 
         impactTabs.forEach(tab => {
             tab.addEventListener('click', () => {
-                const targetId = tab.dataset.target;
-                updateImpactContent(targetId);
+                const target = tab.dataset.target;
+                updateImpactContent(target);
             });
         });
 
-        updateDomeContent('d1');
+        // Initialize with the first impact tab's content
         updateImpactContent('students');
     });
     </script>
